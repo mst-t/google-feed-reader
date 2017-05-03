@@ -1,0 +1,11 @@
+{
+  "name": "google_feed_reader",
+  "version": "1.0.0",
+  "description": "Feed Reader app with Google API and the test suites",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}

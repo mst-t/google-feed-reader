@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="feedReaderApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>UdaciFeeds</title>
+        <meta name="viewpanort" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,700">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/icomoon.css">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <script src="bower_components/angular/angular.js"></script>
+    </head>
+    <body ng-controller="FeedCtrl as feed">
+
+        <header>
+            <i ng-click="feed.menuSlide()" class="icon-list"></i>
+            <h1 class="header-title" ng-bind="feed.title"></h1>
+        </header>
+
+        <div ng-cloak ng-class="{'menu-hidden': feed.menuHidden}" >
+            <div class="slide-menu">
+                <ul class="feed-list" ng-repeat="(index, feeds) in feed.allFeeds">
+                    <li ng-click="feed.displayFeed(index)">
+                        <a ng-bind="feeds.name"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="feed" ng-repeat="entry in feed.entries">
+            <a href="{{entry.link}}" class="entry-link">
+                <article class="entry">
+                    <h2 ng-bind="entry.title"></h2>
+                </article>
+            </a>
+        </div>
+
+        <script src="http://google.com/jsapi"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+        <script src="scripts/google.js"></script>
+        <script src="scripts/feedReaderApp.js"></script>
+        <script src="scripts/controllers/feedCtrl.js"></script>
+        <script src="scripts/services/loadService.js"></script>
+    </body>
+</html>
