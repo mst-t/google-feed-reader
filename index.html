@@ -5,13 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>UdaciFeeds</title>
         <meta name="viewpanort" content="width=device-width, initial-scale=1">
-
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,700">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/icomoon.css">
         <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="bower_components/jasmine-core/lib/jasmine-core/jasmine.css">
 
-        <script src="bower_components/angular/angular.js"></script>
     </head>
     <body ng-controller="FeedCtrl as feed">
 
@@ -38,12 +37,22 @@
             </a>
         </div>
 
+        <!-- js files -->
+        <script src="bower_components/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+        <script src="bower_components/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+        <script src="bower_components/jasmine-core/lib/jasmine-core/boot.js"></script>
+
         <script src="http://google.com/jsapi"></script>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-mocks/angular-mocks.js"></script>
 
         <script src="scripts/google.js"></script>
         <script src="scripts/feedReaderApp.js"></script>
         <script src="scripts/controllers/feedCtrl.js"></script>
         <script src="scripts/services/loadService.js"></script>
+
+        <script src="test/spec/feedreader.js"></script>
     </body>
 </html>
